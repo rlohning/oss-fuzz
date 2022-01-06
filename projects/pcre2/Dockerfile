@@ -17,6 +17,6 @@
 FROM gcr.io/oss-fuzz-base/base-builder
 RUN apt-get update && apt-get install -y make autoconf automake libtool
 
-RUN git clone --depth 1 git@github.com:PhilipHazel/pcre2.git pcre2
+RUN git clone --depth 1 https://github.com/PhilipHazel/pcre2.git pcre2
 WORKDIR pcre2
 COPY build.sh $SRC/
